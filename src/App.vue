@@ -1,11 +1,12 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
+  <mainNavbar />
   <router-view />
+  <footerPage />
 </template>
-
+<script setup>
+import mainNavbar from "./components/mainNavbar.vue";
+import footerPage from "./components/footerPage.vue";
+</script>
 <style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -19,11 +20,18 @@ nav {
   padding: 30px;
 
   a {
+    padding: 5px 15px;
     font-weight: bold;
     color: #2c3e50;
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
 
     &.router-link-exact-active {
-      color: #42b983;
+      color: #638fc5;
+    }
+    &:hover {
+      color: #638fc5 !important;
+      background-color: #2c3e50;
     }
   }
 }

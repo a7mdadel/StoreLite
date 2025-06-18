@@ -1,0 +1,14 @@
+[
+  {
+    id: 1,
+    name: "Product One",
+    price: 10,
+    image: "https://via.placeholder.com/150",
+  },
+  {
+    id: 2,
+    name: "Product Two",
+    price: 20,
+    image: "https://via.placeholder.com/150",
+  },
+];

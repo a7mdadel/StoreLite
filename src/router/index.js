@@ -1,23 +1,33 @@
 import { createRouter, createWebHistory } from "vue-router";
-import HomeView from "../views/HomeView.vue";
+// Importing views for the routes
+import homePage from "../views/homePage.vue";
+import productDetailsPage from "../views/productDetailsPage.vue";
+import loginPage from "../views/loginPage.vue";
+import registerPage from "../views/registerPage.vue";
+import profilePage from "../views/profilePage.vue";
+import cartPage from "@/views/cartPage.vue";
+import FavoritesPage from "../views/FavoritesPage.vue";
 
+// Defining the routes for the application
 const routes = [
+  { path: "/", name: "Home", component: homePage },
   {
-    path: "/",
-    name: "home",
-    component: HomeView,
+    path: "/product/:id",
+    name: "ProductDetails",
+    component: productDetailsPage,
   },
+  { path: "/login", name: "Login", component: loginPage },
+  { path: "/register", name: "Register", component: registerPage },
+  { path: "/profile", name: "Profile", component: profilePage },
+  { path: "/cart", name: "Cart", component: cartPage },
   {
-    path: "/about",
-    name: "about",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
+    path: "/favorites",
+    name: "Favorites",
+    component: FavoritesPage,
   },
 ];
 
+// Creating the router
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
