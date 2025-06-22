@@ -2,7 +2,11 @@
   <div class="container py-5">
     <h1 class="mb-4">Demo Products</h1>
     <div class="row g-4">
-      <div v-for="product in products" :key="product.id" class="col-md-4">
+      <div
+        v-for="product in products"
+        :key="product.id"
+        class="col-md-4 overflow-hidden"
+      >
         <div class="card h-100">
           <img :src="product.image" class="card-img-top" :alt="product.name" />
           <div class="card-body">

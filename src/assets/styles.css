@@ -12,6 +12,7 @@
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
+  overflow-x: hidden;
 }
 
 .navbar,

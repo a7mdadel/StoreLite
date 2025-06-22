@@ -25,13 +25,12 @@ nav {
     color: #2c3e50;
     border-radius: 20px;
     transition: all 0.3s ease-in-out;
-
     &.router-link-exact-active {
-      color: #638fc5;
+      color: #032a5a;
     }
     &:hover {
       color: #638fc5 !important;
-      background-color: #2c3e50;
+      background-color: #1a2733;
     }
   }
 }

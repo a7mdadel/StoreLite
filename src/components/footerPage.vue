@@ -16,16 +16,20 @@
           <h5 class="text-uppercase mb-3">Quick Links</h5>
           <ul class="list-unstyled">
             <li>
-              <a href="#" class="text-light text-decoration-none">Home</a>
+              <a href="/" class="text-light text-decoration-none">Home</a>
             </li>
             <li>
-              <a href="#" class="text-light text-decoration-none">Shop</a>
+              <a href="/profile" class="text-light text-decoration-none"
+                >Profile</a
+              >
             </li>
             <li>
-              <a href="#" class="text-light text-decoration-none">About Us</a>
+              <a href="/login" class="text-light text-decoration-none">Login</a>
             </li>
             <li>
-              <a href="#" class="text-light text-decoration-none">Contact</a>
+              <a href="/register" class="text-light text-decoration-none"
+                >Register</a
+              >
             </li>
           </ul>
         </div>
@@ -35,7 +39,7 @@
           <h5 class="text-uppercase mb-3">Contact Us</h5>
           <p>Email: support@mystore.com</p>
           <p>Phone: +1 (123) 456-7890</p>
-          <p>Address: 123 Fashion Street, New York, NY</p>
+          <p>Address: 123 Fashion Street, Tanta, Egypt</p>
         </div>
       </div>
 
@@ -43,8 +47,14 @@
 
       <!-- Bottom -->
       <div class="text-center">
-        <p class="mb-0">&copy; 2025 MY STORE. All rights reserved.</p>
+        <p class="text-secondary">&copy; 2025 MY STORE. All rights reserved.</p>
       </div>
     </div>
   </footer>
 </template>
+<style scoped>
+footer {
+  background-color: #343a40;
+  color: #f8f9fa;
+}
+</style>

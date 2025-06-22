@@ -1,7 +1,10 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-light">
     <div class="container">
-      <RouterLink class="navbar-brand" to="/">MyStore</RouterLink>
+      <RouterLink class="navbar-brand" to="/">
+        <a href=""> <img style="width: 40px" src="../assets/download.png" /></a
+        >MyStore</RouterLink
+      >
 
       <button
         class="navbar-toggler"
@@ -55,7 +58,27 @@
 import { onMounted } from "vue";
 import { cart } from "../stores/cart";
 import { favorites } from "../stores/favorites";
+import { Collapse } from "bootstrap";
 
+onMounted(() => {
+  const navbar = document.querySelector(".navbar-collapse");
+  const toggler = document.querySelector(".navbar-toggler");
+  document.addEventListener("click", function (event) {
+    const isClickInsideNavbar =
+      navbar.contains(event.target) || toggler.contains(event.target);
+    if (!isClickInsideNavbar && navbar.classList.contains("show")) {
+      new Collapse(navbar).hide();
+    }
+  });
+  const navLinks = document.querySelectorAll(".navbar-collapse .nav-link");
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      if (navbar.classList.contains("show")) {
+        new Collapse(navbar).hide();
+      }
+    });
+  });
+});
 function toggleMode() {
   const current = localStorage.getItem("theme") || "light";
   const next = current === "light" ? "dark" : "light";
